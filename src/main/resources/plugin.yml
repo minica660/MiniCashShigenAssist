@@ -6,12 +6,12 @@ api-version: '1.21'
 commands:
   minerassist:
     usage: "/minerassist"
-    description: §cMinerassistプラグインのメインコマンド
+    description: §cMinerassistプラグインのメインコマンドです
     default: op
 
     permission: minicashshigenassist.commands.minerassist
   assist:
     usage: "/assist"
-    desctiption: §c採掘勢の助けになる機能を提供します
+    desctiption: §c採掘勢の助けになる機能を設定できます
     default: op
     permission: minicashshigenassist.commands.assist
