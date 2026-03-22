@@ -96,8 +96,29 @@ public class Event implements Listener {
 
     }
 
+
+    @EventHandler
+    public void onPlayerQuit(PlayerQuitEvent event){
+        // もしプレイヤーが暗視効果を受け取るプレイヤーを入れるListに入っていればListから削除
+        UUID id = event.getPlayer().getUniqueId();
+        if (mPublic.getCheckNightVision().contains(id)){
+            mPublic.removeCheckNightVision(id);
+        }
+
+        if (mPublic.getCheckDurability().contains(id)){
+            mPublic.removeCheckDurability(id);
+        }
+
+        if (mPublic.getCheckNightVision().contains(id)){
+            mPublic.removeElytra(id);
+        }
+    }
+
     @EventHandler
     public void inventoryClick(InventoryClickEvent event){
+        if (event.getCurrentItem() == null){
+            return;
+        }
         Player player = (Player) event.getWhoClicked();
         if ((event.getInventory().getHolder() instanceof GUI)) {
             File playerFile = new File((plugin.getDataFolder()), "players/" + player.getUniqueId() + ".yml");
