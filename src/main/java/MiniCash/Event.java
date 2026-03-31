@@ -16,6 +16,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.Damageable;
@@ -27,6 +28,7 @@ import org.checkerframework.checker.units.qual.C;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.UUID;
 
 public class Event implements Listener {
 
@@ -70,7 +72,7 @@ public class Event implements Listener {
                 config.set("elytra",false);
                 config.save(playerFile);
 
-                player.sendMessage("[§aMiniCashPortalTeleport§r] §6データファイルを作成しました");
+                player.sendMessage("[§aMiniCashShigenAssist§r] §6データファイルを作成しました");
                 plugin.getLogger().info(player.getName() + " のデータファイルを作成しました！");
 
             } catch (IOException e) {
@@ -78,7 +80,7 @@ public class Event implements Listener {
                 plugin.getLogger().severe(e.getMessage());
             }
         }else {
-            player.sendMessage("[§aMiniCashPortalTeleport§r] /minerassistで補助機能のON,OFFを切り替えられます");
+            player.sendMessage("[§aMiniCashShigenAssist§r] /minerassistで補助機能のON,OFFを切り替えられます");
 
             FileConfiguration playerConfig = YamlConfiguration.loadConfiguration(playerFile);
 
@@ -96,7 +98,6 @@ public class Event implements Listener {
 
     }
 
-
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event){
         // もしプレイヤーが暗視効果を受け取るプレイヤーを入れるListに入っていればListから削除
@@ -113,6 +114,7 @@ public class Event implements Listener {
             mPublic.removeElytra(id);
         }
     }
+
 
     @EventHandler
     public void inventoryClick(InventoryClickEvent event){
@@ -444,4 +446,5 @@ public class Event implements Listener {
     }
 
 }
+
 
