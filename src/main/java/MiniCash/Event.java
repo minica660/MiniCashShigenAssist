@@ -165,7 +165,7 @@ public class Event implements Listener {
                 event.getInventory().setItem(event.getSlot(),nightItem );
 
                 player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1, 1);
-                player.sendMessage("[§aMiniCashPortalTeleport§r] §6暗視OFF状態に変更しました");
+                player.sendMessage("[§aAssist§r] §6暗視OFF状態に変更しました");
                 plugin.getLogger().info(player.getName() + " 暗視OFF状態に変更しました");
 
                 player.updateInventory();
@@ -191,7 +191,7 @@ public class Event implements Listener {
                 event.getInventory().setItem(event.getSlot(),nightItem );
 
                 player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1, 1);
-                player.sendMessage("[§aMiniCashPortalTeleport§r] §6暗視ON状態に変更しました");
+                player.sendMessage("[§aAssist§r] §6暗視ON状態に変更しました");
                 plugin.getLogger().info(player.getName() + " 暗視ON状態に変更しました");
 
                 player.updateInventory();
@@ -220,7 +220,7 @@ public class Event implements Listener {
                 event.getInventory().setItem(event.getSlot(),durabilityItem );
 
                 player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1, 1);
-                player.sendMessage("[§aMiniCashPortalTeleport§r] §6耐久値警告OFF状態に変更しました");
+                player.sendMessage("[§aAssist§r] §6耐久値警告OFF状態に変更しました");
                 plugin.getLogger().info(player.getName() + " 耐久値警告OFF状態に変更しました");
 
                 player.updateInventory();
@@ -246,7 +246,7 @@ public class Event implements Listener {
                 event.getInventory().setItem(event.getSlot(),durabilityItem );
 
                 player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1, 1);
-                player.sendMessage("[§aMiniCashPortalTeleport§r] §6耐久値警告ON状態に変更しました");
+                player.sendMessage("[§aAssist§r] §6耐久値警告ON状態に変更しました");
                 plugin.getLogger().info(player.getName() + " 耐久値警告ON状態に変更しました");
 
 
@@ -270,7 +270,7 @@ public class Event implements Listener {
                 event.getInventory().setItem(event.getSlot(),elytraItem );
 
                 player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1, 1);
-                player.sendMessage("[§aMiniCashPortalTeleport§r] §6エリトラ補助OFF状態に変更しました");
+                player.sendMessage("[§aAssist§r] §6エリトラ補助OFF状態に変更しました");
                 plugin.getLogger().info(player.getName() + " エリトラ補助OFF状態に変更しました");
 
 
@@ -292,7 +292,7 @@ public class Event implements Listener {
                 event.getInventory().setItem(event.getSlot(),elytraItem );
 
                 player.playSound(player.getLocation(), Sound.UI_BUTTON_CLICK, 1, 1);
-                player.sendMessage("[§aMiniCashPortalTeleport§r] §6エリトラ補助ON状態に変更しました");
+                player.sendMessage("[§aAssist§r] §6エリトラ補助ON状態に変更しました");
                 plugin.getLogger().info(player.getName() + " エリトラ補助ON状態に変更しました");
 
 
@@ -446,5 +446,6 @@ public class Event implements Listener {
     }
 
 }
+
 
 
