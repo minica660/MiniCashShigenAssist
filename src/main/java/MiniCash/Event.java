@@ -72,8 +72,7 @@ public class Event implements Listener {
                 config.set("elytra",false);
                 config.save(playerFile);
 
-                player.sendMessage("[§aMiniCashShigenAssist§r] §6データファイルを作成しました");
-                plugin.getLogger().info(player.getName() + " のデータファイルを作成しました！");
+a                plugin.getLogger().info(player.getName() + " のデータファイルを作成しました！");
 
             } catch (IOException e) {
                 player.sendMessage(e.getMessage());
