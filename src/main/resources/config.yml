@@ -1,4 +1,4 @@
 # 全体への設定をできます
-night_vision : false
+night_vision : true
 Durability_value : true
 elytra : true
